@@ -7,9 +7,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: blume-pe
     permissions:
       contents: read
       pages: write
@@ -23,12 +20,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: blume-pe/package-lock.json
+          cache-dependency-path: package-lock.json
       - run: npm ci
       - run: npm run build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: blume-pe/dist
+          path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
