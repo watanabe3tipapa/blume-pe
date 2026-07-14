@@ -1,0 +1,17 @@
+{
+  "name": "blume-pe",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "blume dev",
+    "build": "blume build",
+    "preview": "blume preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "blume": "^1.0.3"
+  }
+}
